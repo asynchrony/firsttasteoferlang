@@ -45,7 +45,10 @@ q:before, q:after {
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     min-height: 740px;
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
@@ -53,14 +56,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-b, strong { font-weight: bold; font-variant: small-caps; color: #1B676B; }
-i, em { font-style: italic; color: #F07818; }
+b, strong { font-weight: bold; text-transform: none; color: #f07818; display: inline-block; }
+i, em { font-style: italic; }
 
 h1 {
-  font-size: 6em;
+  font-size: 3em;
 }
-
-.step.wide { width: 1300px; }
 
 a {
     color: inherit;
@@ -267,19 +268,11 @@ body     { pointer-events: none; }
     transition-delay:         1.75s;
 }
 
-#ing.active .scaling {
-    -webkit-transform: scale(0.7);
-    -moz-transform:    scale(0.7);
-    -ms-transform:     scale(0.7);
-    -o-transform:      scale(0.7);
-    transform:         scale(0.7);
-
+.active .impact {
+    margin-right: 20pt;
+    -webkit-transform: scale(1.5);
+    -webkit-transition: 0.5s;
     -webkit-transition-delay: 2s;
-    -moz-transition-delay:    2s;
-    -ms-transition-delay:     2s;
-    -o-transition-delay:      2s;
-    transition-delay:         2s;
-
 }
 
 /* imagination */
