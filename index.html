@@ -27,16 +27,105 @@
         <h1><b>101</b></h1>
       </div>
 
-      <div class="step" data-x="-500" data-y="300">
-        <q><b class="impact">why</b> should I use erlang<br /> on my next project?</q>
+      <div class="step" data-x="2000" data-y="0">
+        <q><b class="impact">what</b> does erlang bring to the table that my current language doesn't?</q>
       </div>
 
-      <div class="step" data-x="2000" data-y="0">
-        <q><b class="impact">what</b> does erlang bring to the table<br /> that my current language doesn't?</q>
+      <div class="step" data-x="-500" data-y="300">
+        <q><b class="impact">why</b> should I use erlang on my next project?</q>
       </div>
 
       <div class="step" data-x="3000" data-y="0">
         <q><b class="impact">how</b> do I make magic with erlang?</q>
+      </div>
+
+      <div class="step">
+        <h2><b>what</b></h2>
+      </div>
+
+      <div class="step">
+        <p>programming language and runtime developed by Ericson</p>
+        <p>originally propirettary, now opens sourced on github (http://github.com/erlang/otp)</p>
+        <p>name attributed to both the danish mathematician (Agner Krarup Erlang) and Ericson itself (<b>er</b>ricson <b>lang</b>uage)</p>
+        <p>designed to be the core telephony switching systems that have extreme requirements</p>
+        <p>little to no downtown</p>
+        <p>fault tolerant</p>
+        <p>massively concurrent</p>
+        <p>multi-paradigm: functional programming through side effects</p>
+        <p>mix of high level concept and low level details</p>
+        <p>Open Telecom Platform (OTP) is set of libraries, utilities, and best practices spawned in the trenches</p>
+        <p>runtime compilation and loading of new code</p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+
+      <div class="step">
+        <h2><b>why</b></h2>
+      </div>
+
+      <div class="step">
+        <p>your domain data maps to functional data structures</p>
+        <p>your domain logic can be broken into many concurrent chunks</p>
+        <p>you want to leverage multiple computing units in parallel</p>
+        <p>you hate trying to synchronize your threads</p>
+        <p>software transactional memory makes your head spin</p>
+        <p>you are targeting deployment on *nix (Windows if you hate yourself)</p>
+        <p>your system needs to be fault tolerant</p>
+        <p>your system has may 9's of uptime requirments</p>
+        <p>you want to upgrade your system at runtime w/o taking it down</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+
+      <div class="step">
+        <h2><b>how</b></h2>
+      </div>
+
+      <div class="step">
+        <p>nasty syntax</p>
+        <p>4 different expression terminators</p>
+        <p>; , . <blank></p>
+        <p>flat module structure / MFA</p>
+        <p>functional concepts: higher order functions</p>
+        <p>actor model</p>
+        <p>processes / high level than OS processes or threads / lower cost / spin up thousands</p>
+        <p>NO shared state, all message passing</p>
+        <p>node / application / process</p>
+        <p>OTP</p>
+        <p>gen_server, gen_event, supervisors</p>
+        <p>macros</p>
+        <p>release packaging, upgrade releases</p>
+        <p>node architecture</p>
+        <p>projects using erlang: riak ....</p>
+        <p>limited data structures (limiting AND YET powerful)</p>
+        <p>pid, tuple, list, number, port</p>
+        <p>PATTERN MATCHING</p>
+        <p>single assignment / truth statements</p>
+        <p>impressive concurrent process management</p>
+        <p>fail fast</p>
+        <p></p>
+        <p></p>
+      </div>
+
+      <div class="step">
+        <h2>lessons learned in the trenches</h2>
+      </div>
+
+      <div class="step">
+        <p>syntax learning curve takes a bit, especially if not familiar with actor model or functional programming</p>
+        <p>OTP process architecture is fundamental to how you structure your code and solve your problems</p>
+        <p>mix of high and low level abstractions is jarring</p>
+        <p>our version of TDD and using test doubles: our changes to Meck</p>
+        <p>missing key features of other languages (tooling, line numbers in exceptions, etc)</p>
+        <p>massive concurrency can have unintended side effects, requires different way of looking at problems</p>
+        <p>shared state in the system is still a sticking point (domain level)</p>
+        <p>evil genius in the docs</p>
+        <p>error handling leaves something to be desired</p>
+        <p></p>
+        <p></p>
       </div>
 
       <!--

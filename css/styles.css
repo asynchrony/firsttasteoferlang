@@ -59,9 +59,8 @@ body {
 b, strong { font-weight: bold; text-transform: none; color: #f07818; display: inline-block; }
 i, em { font-style: italic; }
 
-h1 {
-  font-size: 3em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
 
 a {
     color: inherit;
