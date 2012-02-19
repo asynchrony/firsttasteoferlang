@@ -57,3 +57,11 @@ a:hover { color: #333;}
 #overview .text { font-size: 60px; }
 
 .overview-idea {font-size: 40px; height: 400px;}
+
+#how {width:800px;font-size:100px;text-align:left;}
+
+#terms {text-align:left;font-size:60px;}
+
+.bullet {font-size:50px; letter-spacing:0.5em;  -webkit-margin-before:0.5em; -webkit-margin-after:0.5em;}
+
+.line {font-size:90px;height:600px}
