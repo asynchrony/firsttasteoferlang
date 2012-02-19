@@ -26,6 +26,8 @@ a:hover { color: #333;}
 .light { font-weight: 400; }
 .extralight { font-weight: 300; letter-spacing: .1em; }
 .small { display: block; padding: 20px; font-size: 20px; font-weight: 600; }
+.left {float:left;}
+.right {float:right;}
 
 /* COMMON STEP STYLES */
 
@@ -44,11 +46,17 @@ a:hover { color: #333;}
 #title {width: 1240px; height: 600px; text-align: left; }
 #title-text1 { font-size: 102px; }
 #title-text2 { font-size: 153px; }
-#title-text2 #cake {margin-left: 35px; height: 0.6em; vertical-align: middle;}
+#title-text2 .image {margin-left: 35px; height: 0.6em; vertical-align: middle;}
 
 #subtitle-text1 { font-size: 60px; }
 #subtitle-text2 { font-size: 210px; }
 #subtitle-text3 { font-size: 55px; }
+
+#overview {height:500px;}
+#overview .image { height: 3.2em; width: 2.5em}
+#overview .text { font-size: 60px; }
+
+.overview-idea {font-size: 40px; height: 400px;}
 
 #ar-adaptive { font-size: 192px; }
 #ar-adaptive-fixed { font-size: 54px; }
