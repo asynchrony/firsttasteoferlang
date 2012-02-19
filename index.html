@@ -8,125 +8,33 @@
     <meta name="author" content="Benjamin P Lee" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
-    <link href="css/styles.css" rel="stylesheet" />
+    <!--<link href="css/styles.css" rel="stylesheet" />-->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
 
     <div id="impress" class="impress-not-supported">
 
-      <div class="fallback-message">
-        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+      <div id="title" class="step" data-x="0" data-y="0" data-scale="2">
+        <div class="big bold">
+          <div id="title-text1">A first taste of</div>
+          <div id="title-text2">
+            <b>Erlang</b>
+            <object id="cake" data="img/cake.svg" type="image/svg+xml"></object>
+          </div>
+        </div>
       </div>
 
-      <div class="step" data-x="0" data-y="0" data-scale="4">
-        <h1>erlang</h1>
-        <br />
-        <br />
-        <br />
-        <h1><b>101</b></h1>
+      <div id="subtitle" class="step" data-x="-800" data-y="0">
+        <div class="big bold">
+          <div id="subtitle-text1">What you should know</div>
+          <div id="subtitle-text2"><i>before</i></div>
+				  <div id="subtitle-text3">you start your next project</div>
+			  </div>
       </div>
 
-      <div class="step" data-x="2000" data-y="0">
-        <q><b class="impact">what</b> does erlang bring to the table that my current language doesn't?</q>
-      </div>
 
-      <div class="step" data-x="-500" data-y="300">
-        <q><b class="impact">why</b> should I use erlang on my next project?</q>
-      </div>
-
-      <div class="step" data-x="3000" data-y="0">
-        <q><b class="impact">how</b> do I make magic with erlang?</q>
-      </div>
-
-      <div class="step" data-x="-500" data-y="300">
-        <h2><b>what</b></h2>
-      </div>
-
-      <div class="step" data-x="-1500" data-y="300">
-        <p>programming language and runtime developed by Ericson</p>
-        <p>originally propirettary, now opens sourced on github (http://github.com/erlang/otp)</p>
-        <p>name attributed to both the danish mathematician (Agner Krarup Erlang) and Ericson itself (<b>er</b>ricson <b>lang</b>uage)</p>
-        <p>designed to be the core telephony switching systems that have extreme requirements</p>
-        <p>little to no downtown</p>
-        <p>fault tolerant</p>
-        <p>massively concurrent</p>
-        <p>multi-paradigm: functional programming through side effects</p>
-        <p>mix of high level concept and low level details</p>
-        <p>Open Telecom Platform (OTP) is set of libraries, utilities, and best practices spawned in the trenches</p>
-        <p>runtime compilation and loading of new code</p>
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
-
-      <div class="step" data-x="-2500" data-y="300">
-        <h2><b>why</b></h2>
-      </div>
-
-      <div class="step" data-x="-3500" data-y="300">
-        <p>your domain data maps to functional data structures</p>
-        <p>your domain logic can be broken into many concurrent chunks</p>
-        <p>you want to leverage multiple computing units in parallel</p>
-        <p>you hate trying to synchronize your threads</p>
-        <p>software transactional memory makes your head spin</p>
-        <p>you are targeting deployment on *nix (Windows if you hate yourself)</p>
-        <p>your system needs to be fault tolerant</p>
-        <p>your system has may 9's of uptime requirments</p>
-        <p>you want to upgrade your system at runtime w/o taking it down</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
-
-      <div class="step" data-x="-4500" data-y="300">
-        <h2><b>how</b></h2>
-      </div>
-
-      <div class="step" data-x="-5500" data-y="300">
-        <p>nasty syntax</p>
-        <p>4 different expression terminators</p>
-        <p>; , . [blank]</p>
-        <p>flat module structure / MFA</p>
-        <p>functional concepts: higher order functions</p>
-        <p>actor model</p>
-        <p>processes / high level than OS processes or threads / lower cost / spin up thousands</p>
-        <p>NO shared state, all message passing</p>
-        <p>node / application / process</p>
-        <p>OTP</p>
-        <p>gen_server, gen_event, supervisors</p>
-        <p>macros</p>
-        <p>release packaging, upgrade releases</p>
-        <p>node architecture</p>
-        <p>projects using erlang: riak ....</p>
-        <p>limited data structures (limiting AND YET powerful)</p>
-        <p>pid, tuple, list, number, port</p>
-        <p>PATTERN MATCHING</p>
-        <p>single assignment / truth statements</p>
-        <p>impressive concurrent process management</p>
-        <p>fail fast</p>
-        <p></p>
-        <p></p>
-      </div>
-
-      <div class="step" data-x="-6500" data-y="300">
-        <h2>lessons learned in the trenches</h2>
-      </div>
-
-      <div class="step" data-x="-7500" data-y="300">
-        <p>syntax learning curve takes a bit, especially if not familiar with actor model or functional programming</p>
-        <p>OTP process architecture is fundamental to how you structure your code and solve your problems</p>
-        <p>mix of high and low level abstractions is jarring</p>
-        <p>our version of TDD and using test doubles: our changes to Meck</p>
-        <p>missing key features of other languages (tooling, line numbers in exceptions, etc)</p>
-        <p>massive concurrency can have unintended side effects, requires different way of looking at problems</p>
-        <p>shared state in the system is still a sticking point (domain level)</p>
-        <p>evil genius in the docs</p>
-        <p>error handling leaves something to be desired</p>
-        <p></p>
-        <p></p>
-      </div>
 
       <!--
 
@@ -182,12 +90,12 @@
 
       -->
 
-      <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+      <div id="credits" class="step" data-x="10000" data-y="10000">
+        <p><b>Credits:</b></p>
+        <p>Impress.js</p>
+        <p><a href="http://thenounproject.com/noun/cake/#icon-No557">Cake icon, The Noun Project</a></p>
       </div>
-    </div>
 
-    <div class="hint">
-      <p>Use a spacebar or arrow keys to navigate</p>
     </div>
 
     <script src="js/impress.js"></script>
