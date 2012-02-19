@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024, initial-scale=0.75, user-scalable=no" />
-    <title>Erlang 101 - The what, why, and how of choosing Erlang for your next project.</title>
-    <meta name="description" content="The why, what, and how of choosing Erlang for your next project." />
-    <meta name="author" content="Benjamin P Lee" />
+    <title>A first taste of Erlang</title>
+    <meta name="description" content="A first taste of Erlang: what you should know before you start your next project" />
+    <meta name="author" content="Benjamin P Lee and Matt Campbell" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
-    <!--<link href="css/styles.css" rel="stylesheet" />-->
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
 
-    <div id="impress" class="impress-not-supported">
+    <div id="impress">
 
       <div id="title" class="step" data-x="0" data-y="0" data-scale="2">
         <div class="big bold">
@@ -41,7 +40,8 @@
         <div class="big bold right">
           <div class="text">Erlang is a language</div>
           <div class="text">and a virtual machine</div>
-				  <div class="text">and has 4096 children</div>
+				  <div class="text">has 4096 children</div>
+          <div class="text extralight">and is <b>MUNCTIONAL</b></div>
 			  </div>
       </div>
 
@@ -67,63 +67,17 @@
         <p class="light">process lifecycle and supervision</p>
       </div>
 
-      <!--
-
-      <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+      <div id="forkme" class="step" data-x="10000" data-y="10000">
+        <p><b>Authors</b></p>
+        <p><a href="https://github.com/benjaminplee">Benjamin P Lee (@leebenjp)</a></p>
+        <p><a href="https://github.com/xenolinguist">Matt Campbell (@xenolinguist)</a></p>
+        <p><b>Fork Me on GitHub:</b></p>
+        <p><a href="https://github.com/benjaminplee/erlang101">https://github.com/benjaminplee/erlang101</a></p>
       </div>
 
-      <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-      </div>
-
-      <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-      </div>
-
-      <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-      </div>
-
-      <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-      </div>
-
-      <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-      </div>
-
-      <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-      </div>
-
-      <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-      </div>
-
-      <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-      </div>
-
-      <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-      </div>
-
-      <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-      </div>
-
-      -->
-
-      <div id="credits" class="step" data-x="10000" data-y="10000">
+      <div id="credits" class="step" data-x="20000" data-y="20000">
         <p><b>Credits:</b></p>
-        <p>Impress.js</p>
+        <p><a href="https://github.com/bartaz/impress.js/">Impress.js</a></p>
         <p><a href="http://thenounproject.com/noun/cake/#icon-No557">Cake icon, The Noun Project</a></p>
       </div>
 
@@ -131,8 +85,6 @@
 
     <script src="js/impress.js"></script>
     <script>impress();</script>
-
-    <a href="https://github.com/benjaminplee/erlang101"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" /></a>
 
   </body>
 </html>
