@@ -10,6 +10,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="Stylesheet" href="css/shThemeRDark.css"/>
   </head>
   <body>
 
@@ -128,9 +130,17 @@
       </div>
 
       <div class="step has" data-x="100" data-y="540">
-        <p class="bold">Elementary data types ONLY</p>
-        <p><i>no objects</i></p>
-        <p class="big"><b>Numbers, Lists, Tuples, Atoms, Funs</b></p>
+        <p class="bold">Functions</p>
+        <p><i>{M, F, A} = {module, function, arity}</i></p>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <pre class='brush: erlang'>
+          -module(math).
+
+          add(X, Y) -> X + Y.
+          increment(X) -> add(X, 1).
+        </pre>
       </div>
 
       <div class="step has" data-x="100" data-y="540">
@@ -138,17 +148,129 @@
         <p class="big"><b>period, comma, semi-colon,<br/> and nothing!</b></p>
       </div>
 
+      <div class="step code" data-scale="0.2">
+        <pre class='brush: erlang'>
+          foo(X, Y) ->
+            Y = math:add(X, Y),
+            Z = Y rem 2,
+            case Z of
+              0 -> true;
+              1 -> undefined
+            end.
+        </pre>
+      </div>
+
+      <div class="step has" data-x="100" data-y="540">
+        <p class="bold">Elementary data types ONLY</p>
+        <p><i>no objects</i></p>
+        <p class="big"><b>Numbers, Lists, Tuples, Atoms, Funs</b></p>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">atoms</p>
+        <p><i>name = value (like Ruby symbols)</i></p>
+        <p><i>generally start with lowercase letter</i></p>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">{tuples}</p>
+        <p><i>fixed length ordered list of elements</i></p>
+        <p><i>can contain anything</i></p>
+        <pre class='brush: erlang'>
+          X = 4
+          Y = 5.5
+          Point = {X, Y}
+          Location = {point, X, Y}
+        </pre>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">[lists]</p>
+        <p><i>ordered arbitrary length list of elements</i></p>
+        <p><i>singly linked; can contain anything</i></p>
+        <p><i>strings are lists of ascii numbers</i></p>
+        <pre class='brush: erlang'>
+          EmptyList = []
+          Small = [1, 2, 3]
+
+          AddHead = [0 | Small] 
+                  = [0, 1, 2, 3]
+
+          String = "abc"
+                 = [97, 98, 99]
+        </pre>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">Funs</p>
+        <p><i>lambdas. closures.</i></p>
+        <pre class='brush: erlang'>
+          addX(X) ->
+            fun(Y) ->
+              X + Y
+            end.
+
+          AddTen = addX(10)
+          Z = 100
+          Result = AddTen(Z) = 110
+        </pre>
+      </div>
+
       <div class="step has" data-x="100" data-y="540">
         <p class="bold">No loops</p>
         <p class="big"><b>only recurssion</b></p>
+        <p><i>tail call optimization ;-)</i></p>
         <p><i>see above</i></p>
       </div>
 
       <div class="step has" data-x="100" data-y="540">
         <p class="bold">Single assignment</p>
-        <p><i>truth statements</i></p>
+        <p><i>truth statements; synonyms</i></p>
         <p><i>no mutable state</i></p>
         <p class="big"><b>pattern matching</b></p>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">Simple Examples</p>
+        <pre class='brush: erlang'>
+          X = 4.
+          Y = 2.
+          Z = X = Y + 2.
+
+          I = {point, X, Y}.
+          {Type, _, _} = I.
+          Type = point.
+
+          List = [1, 2, 3]
+          [Head | Tail] = List
+            % Head = 1
+            % Tail = [2, 3]
+        </pre>
+      </div>
+
+      <div class="step code" data-scale="0.2">
+        <p class="bold">Recursive <b>Fibonoci</b> in Erlang</p>
+        <pre class='brush: erlang'>
+          fib(0) -> 0;
+          fib(1) -> 1;
+          fib(N) ->
+            fib(N-1) + fib(N-2).
+        </pre>
+      </div>
+
+      <div class="step smallcode" data-scale="0.2">
+        <p class="bold">Crazy bit string pattern matching</p>
+        <p><i>one byte TYPE, two byte LENGTH, then payload</i></p>
+        <pre class='brush: erlang'>
+          parse(&lt;&lt;Type:8,
+                  Length:8,
+                  Payload:Length,
+                  Rest/binary>>) ->
+            % do something
+            Rest;
+          parse(IncompleteCommand) ->
+            IncompleteCommand.
+        </pre>
       </div>
 
       <div id="forkme" class="step" data-x="10000" data-y="10000">
@@ -167,6 +289,9 @@
 
     </div>
 
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushErlang.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all()</script>
     <script src="js/impress.js"></script>
     <script>impress();</script>
 

@@ -72,3 +72,6 @@ a:hover { color: #333;}
 #erlanghas {font-size:90px;}
 
 .has .bold {font-size:60px;}
+
+.code { font-size:20;}
+.smallcode { font-size:10;}
