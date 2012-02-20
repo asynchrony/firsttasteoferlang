@@ -76,4 +76,9 @@ a:hover { color: #333;}
 .code { font-size:20;}
 .smallcode { font-size:10;}
 
+#experience1 b {font-size:45px;}
+#experience1 p {font-size:35px;}
+
+#experience2 p {font-size:35px;line-height: 1em;}
+
 /*#munctional:not(.active) {display:none;}*/
