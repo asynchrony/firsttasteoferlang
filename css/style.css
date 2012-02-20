@@ -75,3 +75,5 @@ a:hover { color: #333;}
 
 .code { font-size:20;}
 .smallcode { font-size:10;}
+
+/*#munctional:not(.active) {display:none;}*/
