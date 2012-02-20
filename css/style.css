@@ -56,6 +56,10 @@ a:hover { color: #333;}
 #overview .image { height: 3.2em; width: 2.5em}
 #overview .text { font-size: 60px; }
 
+#scales {height:300px;width:800px;}
+#scales .image { height: 2em; width: 2em}
+#scales .text { font-size: 60px; }
+
 .overview-idea {font-size: 40px; height: 400px;}
 
 #how {width:800px;font-size:100px;text-align:left;}
