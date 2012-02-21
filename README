@@ -1,9 +1,25 @@
-Erlang 101
+A first taste of Erlang
 
-The why, what, and how of choosing Erlang for your next project.
+What you should know before you start your next project
 
+Talk given at @asynchrony company meeting inspired by the work of
+
+@leebenjp
+@xenolinguist
+@OliverFerrigni
+@natemckie
+@yairgo
+and others
+
+Repo originally named erlang101 on GitHub.
+
+See the live presentation at http://benjaminplee.github.com/firsttasteoferlang/
+Code examples will live on master
 
 
 Credits:
 
-Impress.js : http://bartaz.github.com/impress.js
+Impress.js
+The Noun Project
+Learn you some Erlang
+http://alexgorbatchev.com/SyntaxHighlighter/
